@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #030303;
+}
+body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.ContainerPai{
+    width: 1750px;
+    height: 750px;
+    border-radius: 30px;
+    padding: 60px;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 60% 40%;
+}
+
+.ContainerPai #primeiro{
+    border: 1px solid #161616;
+    grid-column: 1/4;
+    background: #090909;
+    color: white;
+    border-radius: 20px;
+    padding: 40px 30px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around ;
+
+}
+.ContainerPai #primeiro div{
+    background-color:#006989;
+    color: white;
+    width: 10px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding-left: 5px;
+     
+}
+.ContainerPai #primeiro div> p{
+  opacity: 0;
+   animation:opacidade 2s linear forwards;
+   animation-delay: 1.8s;
+}
+.ContainerPai #primeiro div:nth-child(2){
+    position: relative;
+    animation: porcentagem1 2s linear forwards;
+    animation-delay: 1s;
+}
+.ContainerPai #primeiro div:nth-child(3){
+    position: relative;
+    animation: porcentagem2 2s linear forwards;
+    animation-delay: 1s;
+}
+.ContainerPai #primeiro div:nth-child(4){
+    position: relative;
+    animation: porcentagem3 2s linear forwards;
+    animation-delay: 1s;
+}
+.ContainerPai #primeiro div:nth-child(5){
+    position: relative;
+    animation: porcentagem4 2s linear forwards;
+    animation-delay: 1s;
+}
+@keyframes opacidade{
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes porcentagem1 {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 90%;
+    }
+}
+@keyframes porcentagem2 {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 75%;
+    }
+}
+@keyframes porcentagem3 {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 60%;
+    }
+}
+@keyframes porcentagem4 {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 50%;
+    }
+}
+
+#primeiro>h6{
+    display: flex;
+    justify-content: center;
+    color: #E9E9E9;
+    width: 100%;
+    font-size: 25px;
+    background: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic
+}
+#primeiro div> p{
+    background: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.ContainerPai #segundo{
+    border: 1px solid #161616;
+    background-color: #090909;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+    grid-column: 4/5;
+    padding: 10px;
+}
+#segundo> h6,p{
+    background: none;
+}
+#segundo> h6{
+    color: #E9E9E9;
+    font-size: 25px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+
+}
+#segundo> p{
+    font-size: 13px;
+    color: #B4B4B4;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.ContainerPai #terceiro{
+   
+    border-radius: 20px;
+    grid-column: 1/5;
+    padding:10px;
+    display: grid;  
+    grid-template-areas: 
+    "bloco1 bloco2 bloco3 bloco4";
+    gap: 30px;
+}
+#terceiro div{
+    border: 1px solid #161616;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    background:#090909 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition-duration: 800ms;
+}
+#terceiro div:hover{
+    scale:1.08;
+}
+#terceiro div>h6{
+    align-items: center;
+    grid-area: "titulo";
+    color: #E9E9E9;  
+    background: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+#terceiro div>img{
+    background: none;
+}
+
+
+#terceiro div> p:nth-child(3){
+    opacity: 0;
+    color: #006989;
+    grid-row: numeros;
+    font-size: 25px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+#terceiro div:hover> p:nth-child(3){
+    animation: AparecerValor 1s linear forwards;
+    animation-delay: 1s;
+}
+#terceiro div:hover> p:nth-child(4){
+    animation: moverParagrafo 1s linear forwards;
+}
+#terceiro div> p:nth-child(4){
+    margin-top: -40PX;
+    display: inline-block;
+    position: relative;
+    font-size: 13px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+@keyframes moverParagrafo {
+    100%{
+       transform: translateX(135%);
+    }
+}
+
+@keyframes AparecerValor {
+    100%{
+        opacity: 1;
+    }
+}
+#terceiro div:nth-child(1){
+    grid-area: "bloco1";
+}
+
+#terceiro div:nth-child(2){
+    grid-area: "bloco2";
+}
+
+#terceiro div:nth-child(3){
+    grid-area: "bloco3";
+
+}
+
+#terceiro div:nth-child(4){
+    grid-area: "bloco4";
+
+}
+@media(max-width: 1750px){
+    #terceiro div:hover> p:nth-child(4){
+        animation: moverParagrafo1 1s linear forwards;
+    }
+    @keyframes moverParagrafo1 {
+        100%{
+            transform: translateY(20px);
+        }
+    }
+}
+@media(max-width: 1350px){
+    #segundo> h6{
+        font-size: 18px;
+    }
+    #segundo> p{
+        font-size: 10px;
+    }
+}
+@media(max-width: 1030px){
+    #segundo> p{
+        font-size: 9px;
+    }
+    #terceiro div> p:nth-child(4){
+        font-size: 10px;
+    }
+}
+@media(max-width: 890px){
+    .ContainerPai{
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: 50% 20% 70%;
+    }
+    .ContainerPai #primeiro{
+        grid-column: 1/5;
+    }
+    .ContainerPai #segundo{
+        grid-column: 1/5;
+    }
+    .ContainerPai #terceiro{
+        grid-column: 1/5;
+        width: 100%;
+        height: 100%;
+    }
+    #terceiro div> p:nth-child(3){
+        font-size: 16px;
+    }
+    #terceiro div>h6{
+        font-size: 15px;
+    }
+}
+@media(max-width: 795px){
+    .ContainerPai #terceiro{
+       grid-template-areas: 
+      "bloco1 bloco2"
+      "bloco3 bloco4";
+    }
+   
+}
+@media(max-width: 540px){
+    .ContainerPai #primeiro div{
+        height: 20px;
+    }
+    #primeiro>h6{
+        font-size: 18px;
+    }
+    #primeiro div> p{
+        font-size: 14px;
+    }
+    #segundo> p{
+        font-size: 7px;
+    }
+    .ContainerPai #terceiro{
+       grid-template-areas: 
+      "bloco1 bloco2"
+      "bloco3 bloco4";
+    }
+   
+}
+@media(max-width: 460px){
+    .ContainerPai{
+        grid-template-rows: 50% 20% 140%;
+    }
+    #segundo> p{
+        font-size: 6px;
+    }
+    .ContainerPai #terceiro{
+        grid-template-areas: 
+       "bloco1"
+       "bloco2"
+       "bloco3"
+       "bloco4";
+     }
+}
+@media(max-width: 390px){
+    #primeiro>h6{
+        font-size: 13px;
+    }
+    #primeiro div> p{
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,866 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: #131313;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    background: #080808;
+    align-items: stretch;
+    width: 100%;
+    height: 100px;
+}
+header .titulos{
+    display: grid;
+    grid-template-columns: 90% 5% 5%; 
+    padding-right: 20px;
+    padding-left: 20px;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+.titulos a{
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+    font-style: normal;
+}
+nav{
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 40px;
+    color: #F2F2F2;
+    position: relative;
+}
+nav h3{
+    display: inline-block;
+    position: relative;
+    width: 22ch;
+    white-space: nowrap;
+    border-right: 3px solid rgb(177, 177, 177);
+    overflow: hidden;
+    animation: cursor .4s step-end infinite, escrita 4s steps(22) infinite alternate;
+}
+@keyframes cursor{
+    50%{
+        border-color: transparent;
+    }
+}
+
+@keyframes escrita{
+    0%{
+       width: 0;
+    }
+    100%{
+        width: 22ch;
+    }
+}
+main .containerSlide{
+  
+    padding-top: 50px;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+    transition: transform 8s;
+    position: relative;
+    color: #F2F2F2;
+}
+
+
+main .logos-slide{
+    display: inline-block;
+    animation: 8s slide infinite linear;
+}
+main .logos-slide div{
+    display: inline-block;
+    white-space: nowrap;
+    margin: 0 100px;
+    transition: 750ms;
+}
+@keyframes slide{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+.Front-end{
+    max-width: 1600px;
+    margin: 0 auto;
+    display: grid;
+    padding: 50px 10px 50px 10px;
+    gap: 100px;
+    justify-content: space-around;
+    grid-template-areas:
+    "titulo titulo  blocosFront"
+    "titulo titulo  blocosFront";
+    height: 800px;
+    box-sizing: border-box;
+    
+}
+.Front-end div{
+    border-radius: 20px;
+}
+.titulo{
+    width: 100%;
+    height: 100%;
+    grid-area: "titulo";
+    grid-column: titulo;
+    grid-row: titulo;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.titulo h3{
+    font-size: 70px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+.titulo p{
+    font-size: 16px;
+    color: #B4B4B4;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.titulo button{
+    align-items: center;
+    margin-top: 20px;
+    width: 300px;
+    height: 100px;
+    border-radius: 30px;
+    font-size: 30px;
+    font-family: "Poppins", sans-serif;
+     font-weight: 600;
+    font-style: normal;
+    cursor: pointer;
+}
+.blocosFront{
+    width: 600px;
+    height: 600px;
+    grid-area: "blocosFront";
+    grid-column: blocosFront;
+    grid-row: blocosFront;
+    display: grid;
+    grid-template-areas: 
+    "bloco1 bloco2"
+    "bloco3 bloco4";
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+.blocosFront div{
+    background-color: #151515;
+    border: 2px solid #4C4C4C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 5px;
+    gap: 20px;
+    flex-direction: column;
+    font-size: 15px;
+    color: #A1A1A1;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+.bloco1{
+    grid-area: "bloco1";
+    width: 300px;
+    height: 300px;
+}
+.bloco2{
+    grid-area: "bloco2";
+    width: 300px;
+    height: 300px;
+}
+.bloco3{
+    grid-area: "bloco3";
+    width: 300px;
+    height: 300px;
+}
+.bloco4{
+    grid-area: "bloco4";
+    width: 300px;
+    height: 300px;
+}
+.Back-End{
+    margin-top: 0;
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 800px;
+    color: aliceblue;
+    margin-bottom: 50px;
+}
+
+
+.tituloBack-End{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    grid-area: "tituloback";
+    grid-column: tituloback;
+}
+.tituloBack-End h3{
+    font-size: 50px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+.tituloBack-End p{
+    font-size: 16px;
+    color: #B4B4B4;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.blocosBack{
+    width: 100%;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.blocosBack div{
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    background-color: #151515;
+    border: 2px solid #4C4C4C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 5px;
+    gap: 20px;
+    flex-direction: column;
+    font-size: 15px;
+    color: #A1A1A1;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.Back-End button{
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 300px;
+    height: 100px;
+    border-radius: 30px;
+    font-size: 30px;
+    font-family: "Poppins", sans-serif;
+     font-weight: 600;
+    font-style: normal;
+    cursor: pointer;
+}
+.Banco-dados{
+    margin-top: 0;
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 100px;
+    flex-direction: row-reverse;
+    height: 800px;
+    color: aliceblue;
+    margin-bottom: 50px;
+
+}
+.TituloBancoDados{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    gap: 30px;
+}
+.TituloBancoDados h3{
+    font-size: 70px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+.TituloBancoDados p{
+    font-size: 16px;
+    color: #B4B4B4;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.TituloBancoDados button{
+    align-items: center;
+    margin-top: 20px;
+    width: 300px;
+    height: 100px;
+    border-radius: 30px;
+    font-size: 30px;
+    font-family: "Poppins", sans-serif;
+     font-weight: 600;
+    font-style: normal;
+    cursor: pointer;
+}
+.blocosDados{
+    width: 100%;
+    display: grid; 
+    grid-template-areas: 
+    "bloco1 bloco2"
+    "bloco3 bloco4";
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.blocosDados div{
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    background-color: #151515;
+    border: 2px solid #4C4C4C;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 5px;
+    gap: 20px;
+    flex-direction: column;
+    font-size: 15px;
+    color: #A1A1A1;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@media (max-width: 1360px){
+
+ header .titulos{ 
+   grid-template-columns: 90% 5% 5%;
+}
+    .Front-end{
+        max-width: 1360px;
+        grid-template-areas:
+        "titulo  blocosFront"
+        "titulo  blocosFront";
+        gap: 50px;
+    } 
+    .Front-end .blocosFront{
+        width: 400px;
+    }
+    .Front-end .blocosFront div{
+        width: 200px;
+        height: 200px;
+        font-size: 10px;
+        gap: 20px;
+    }
+
+    .blocosBack div{
+        width: 200px;
+        height: 200px;
+        font-size: 10px;
+    }
+    .blocosDados div{
+        width: 200px;
+        height: 200px;
+        font-size: 10px;
+    }
+
+}
+@media (max-width: 1160px){
+
+    header .titulos{ 
+      grid-template-columns: 80% 10% 10%;
+   }
+   nav h1, .titulo>h3, .tituloBack-End> h3, .TituloBancoDados > h3{
+    font-size: 40px;
+   }
+       .Front-end{
+           box-sizing: border-box;
+           max-width: 100%;
+           grid-template-areas:
+           "titulo  titulo"
+           "blocosFront  blocosFront";
+           gap: 50px;
+       } 
+       .Front-end .titulo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       }
+       .titulo button{
+        margin-top:0px;
+       }
+       .Front-end .blocosFront{
+        grid-template-areas: 
+        "bloco1 bloco2 bloco3 bloco4";
+        width: 100%;
+        height: 250px;
+       }
+       .Front-end .blocosFront div{
+           width: 200px;
+           height: 200px;
+           font-size: 10px;
+           gap: 20px;
+       }
+     
+       .blocosBack div{
+           width: 200px;
+           height: 200px;
+           font-size: 10px;
+       }
+       .blocosDados div{
+           width: 200px;
+           height: 200px;
+           font-size: 10px;
+       }
+   
+   }
+   @media (max-width: 865px){
+
+    header .titulos{ 
+      grid-template-columns: 70% 15% 15%;
+      justify-content: space-between;
+   }
+   .nav{
+    height: 200px;
+   }
+   main  .containerSlide{
+    height: 150px;
+   }
+   nav h1, .titulo>h3, .tituloBack-End> h3, .TituloBancoDados > h3{
+    font-size: 35px;
+   }
+   .titulo>h3, .tituloBack-End> h3, .TituloBancoDados > h3{
+    font-size: 50px;
+   }
+    .titulo> p, .tituloBack-End> p, .TituloBancoDados > p{
+    font-size: 9px;
+   }
+    .titulo> button, .Back-End> button, .TituloBancoDados> button{
+    width: 200px;
+    height: 70px;
+   }
+   .blocosFront p, .blocosBack p, .blocosDados p{
+    font-size: 8px;
+   }
+    
+       .Front-end{
+           box-sizing: border-box;
+           max-width: 100%;
+           grid-template-areas:
+           "titulo  titulo"
+           "blocosFront  blocosFront";
+           gap: 20px;
+       } 
+       .Front-end .titulo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       }
+       .titulo button{
+        margin-top:0px;
+       }
+       .Front-end .blocosFront{
+        grid-template-areas: 
+        "bloco1 bloco2"
+        "bloco3 bloco4";
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 250px;
+        gap: 10px;
+       }
+       .Front-end .blocosFront div{
+           width: 170px;
+           height: 170px;
+           font-size: 10px;
+           gap: 10px;
+       }
+       .blocosFront div> img, .blocosBack div> img,.blocosDados div> img{
+         width: 48px;
+         height: 48px;
+       }
+       .Back-End{
+        height: 700px;
+       }
+       .blocosBack {
+           margin: 30px 30px 0px 30px;
+           width: 100%;
+           height: 400px;
+           font-size: 10px;
+           display: grid;
+           gap: 20px;
+           align-items: center;
+           justify-content: center;
+           grid-template-areas: 
+           "bloco1 bloco2 bloco3"
+           "bloco4 bloco5 bloco5";
+       }
+       .Back-End button{
+        margin-top: 5%;
+       }
+       .blocosBack div:nth-child(1){
+        grid-area: bloco1;
+       }
+       .blocosBack div:nth-child(2){
+        grid-area: bloco2;
+       }
+       .blocosBack div:nth-child(3){
+        grid-area: bloco3;
+       }
+       .blocosBack div:nth-child(4){
+        grid-area: bloco4;
+       }
+       .blocosBack div:nth-child(5){
+        grid-area: bloco5;
+        grid-column: bloco5;
+       }
+       .Banco-dados{
+        margin-top: 100px;
+        flex-direction: column;
+       }
+       .Banco-dados> .TituloBancoDados{
+            align-items: center;
+       }
+       .blocosDados{
+        width: 500px;
+       }
+      
+       .blocosDados div{
+           width: 200px;
+           height: 200px;
+           font-size: 10px;
+           font-size: 8px;
+
+       }
+   
+   }
+   
+   @media (max-width: 640px){
+
+    header .titulos{ 
+      grid-template-columns: 70% 15% 15%;
+      justify-content: space-between;
+   }
+   .nav{
+    height: 200px;
+   }
+   main  .containerSlide{
+    height: 150px;
+   }
+   nav h1, .titulo>h3, .tituloBack-End> h3{
+    font-size: 27px;
+   }
+   .TituloBancoDados h3{
+        font-size: 40px;
+   }
+   nav h3{
+    font-size: 35px;
+   }
+   .titulo>h3, .tituloBack-End> h3{
+    font-size: 45px;
+   }
+    .titulo> p, .tituloBack-End> p, .TituloBancoDados > p{
+    font-size: 9px;
+   }
+    .titulo> button, .Back-End> button, .TituloBancoDados> button{
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 20px;
+   }
+   .titulo p, .tituloBack-End p, .TituloBancoDados p{
+    margin: 0px 30px 0px 30px;
+   }
+
+    
+       .Front-end{
+           box-sizing: border-box;
+           max-width: 100%;
+           grid-template-areas:
+           "titulo  titulo"
+           "blocosFront  blocosFront";
+           gap: 20px;
+           height: 900px;
+       } 
+       .Front-end .titulo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       }
+       .titulo button{
+        margin-top:0px;
+       }
+       .Front-end .blocosFront{
+        grid-template-areas: 
+        "bloco1 bloco2"
+        "bloco3 bloco4";
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 250px;
+        gap: 50px;
+       }
+       .Front-end .blocosFront div{
+           width: 150px;
+           height: 150px;
+           font-size: 10px;
+           gap: 10px;
+       }
+       .blocosFront div> img, .blocosBack div> img,.blocosDados div> img{
+         width: 48px;
+         height: 48px;
+       }
+       .Back-End{
+        height: 700px;
+       }
+       .blocosBack {
+           width: 100%px;
+           height: 400px;
+           font-size: 10px;
+           display: grid;
+           gap: 20px;
+           align-items: center;
+           justify-content: center;
+           grid-template-areas: 
+           "bloco1 bloco2"
+            "bloco3 bloco4 "
+            "bloco5 bloco5";
+       }
+       .Back-End button{
+        margin-top: 25%;
+       }
+       .blocosBack div{
+        width: 150px;
+        height: 150px;
+       }
+       .blocosBack div:nth-child(1){
+        grid-area: bloco1;
+       }
+       .blocosBack div:nth-child(2){
+        grid-area: bloco2;
+       }
+       .blocosBack div:nth-child(3){
+        grid-area: bloco3;
+       }
+       .blocosBack div:nth-child(4){
+        grid-area: bloco4;
+       }
+       .blocosBack div:nth-child(5){
+        grid-area: bloco5;
+       }
+       .Banco-dados{
+        margin-top: 100px;
+        flex-direction: column;
+       }
+       .Banco-dados> .TituloBancoDados{
+            align-items: center;
+       }
+       .blocosDados{
+        width: 500px;
+       }
+      
+       .blocosDados div{
+           width: 150px;
+           height: 150px;
+           font-size: 10px;
+           font-size: 8px;
+
+       }
+   
+   }
+   @media (max-width: 540px){
+
+    header .titulos{ 
+        width: 100%;
+      grid-template-areas: 
+      "nome info1 info1"
+      "nome info2 info2";
+      justify-content: space-between;
+      padding: 5px;
+   }
+   #nomedaPagina{
+    grid-area: "nome";
+    grid-row: nome;
+   }
+   #info1{
+    width: 100%;
+    grid-column: info1;
+    grid-area: "info1";
+   }
+   #info2{
+    width: 100%;
+    grid-column: info2;
+    grid-area: "info2";
+    grid-row: info2;
+   }
+   .nav{
+    height: 200px;
+   }
+   main  .containerSlide{
+    height: 150px;
+   }
+    .titulo>h3, .tituloBack-End> h3{
+    font-size: 27px;
+   }
+   nav h1{
+    font-size: 20px;
+   }
+   .TituloBancoDados h3{
+        font-size: 40px;
+   }
+   nav h3{
+    font-size: 27px;
+   }
+   .titulo>h3, .tituloBack-End> h3{
+    font-size: 45px;
+   }
+    .titulo> p, .tituloBack-End> p, .TituloBancoDados > p{
+    font-size: 9px;
+   }
+    .titulo> button, .Back-End> button, .TituloBancoDados> button{
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 20px;
+   }
+   .titulo p, .tituloBack-End p, .TituloBancoDados p{
+    margin: 0px 30px 0px 30px;
+   }
+
+    
+       .Front-end{
+           box-sizing: border-box;
+           max-width: 100%;
+           grid-template-areas:
+           "titulo  titulo"
+           "blocosFront  blocosFront";
+           gap: 20px;
+           height: 900px;
+       } 
+       .Front-end .titulo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       }
+       .titulo button{
+        margin-top:0px;
+       }
+       .Front-end .blocosFront{
+        grid-template-areas: 
+        "bloco1 bloco2"
+        "bloco3 bloco4";
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 250px;
+        gap: 50px;
+       }
+       .Front-end .blocosFront div{
+           width: 150px;
+           height: 150px;
+           font-size: 7px;
+           gap: 7px;
+       }
+       .blocosFront div> img, .blocosBack div> img,.blocosDados div> img{
+         width: 48px;
+         height: 48px;
+       }
+       .Back-End{
+        height: 700px;
+       }
+       .blocosBack {
+           width: 100%px;
+           height: 400px;
+           font-size: 10px;
+           display: grid;
+           gap: 20px;
+           align-items: center;
+           justify-content: center;
+           grid-template-areas: 
+           "bloco1 bloco2"
+            "bloco3 bloco4 "
+            "bloco5 bloco5";
+       }
+       .Back-End button{
+        margin-top: 25%;
+       }
+       .blocosBack div{
+        width: 150px;
+        height: 150px;
+       }
+       .blocosBack div:nth-child(1){
+        grid-area: bloco1;
+       }
+       .blocosBack div:nth-child(2){
+        grid-area: bloco2;
+       }
+       .blocosBack div:nth-child(3){
+        grid-area: bloco3;
+       }
+       .blocosBack div:nth-child(4){
+        grid-area: bloco4;
+       }
+       .blocosBack div:nth-child(5){
+        grid-area: bloco5;
+       }
+       .Banco-dados{
+        margin-top: 100px;
+        flex-direction: column;
+       }
+       .Banco-dados> .TituloBancoDados{
+            align-items: center;
+       }
+       .blocosDados{
+        width: 100%;
+       }
+      
+       .blocosDados div{
+           width: 150px;
+           height: 150px;
+           font-size: 6px;
+         
+
+       }
+   
+   }
+  
+
