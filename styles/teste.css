@@ -166,6 +166,10 @@ main .logos-slide div{
     font-style: normal;
     cursor: pointer;
 }
+.titulo button> a{
+    text-decoration: none;
+    color: black;
+}
 .blocosFront{
     width: 600px;
     height: 600px;
@@ -292,6 +296,10 @@ main .logos-slide div{
     font-style: normal;
     cursor: pointer;
 }
+    .Back-End button> a{
+        text-decoration: none;
+        color: black;
+    }
 .Banco-dados{
     margin-top: 0;
     max-width: 1500px;
@@ -339,6 +347,10 @@ main .logos-slide div{
      font-weight: 600;
     font-style: normal;
     cursor: pointer;
+}
+.TituloBancoDados button> a{
+    text-decoration: none;
+    color: black;
 }
 .blocosDados{
     width: 100%;

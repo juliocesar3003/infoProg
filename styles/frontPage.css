@@ -171,7 +171,7 @@ body{
     padding:10px;
     display: grid;  
     grid-template-areas: 
-    "bloco1 bloco2 bloco3 bloco4";
+    "bloco1 bloco2 bloco3 bloco4 bloco5";
     gap: 30px;
 }
 #terceiro div{
@@ -234,7 +234,7 @@ body{
 
 @keyframes moverParagrafo {
     100%{
-       transform: translateX(135%);
+        transform: translate(80%, 90%);
     }
 }
 
@@ -259,6 +259,27 @@ body{
 #terceiro div:nth-child(4){
     grid-area: "bloco4";
 
+}
+#terceiro div:nth-child(5){
+    grid-area: "bloco5";
+
+}
+#terceiro div:nth-child(5) > button > a > img {
+    width: 100%;
+    height: 100%;
+    background: none;
+    background-color: none; 
+}
+#terceiro div:nth-child(5) > button > a{
+    width: 100%;
+    height: 100%;
+    background: none;
+    background-color: none; 
+}
+#terceiro div:nth-child(5) > button{
+    border: none;
+    background: none;
+    background-color: none; 
 }
 @media(max-width: 1750px){
     #terceiro div:hover> p:nth-child(4){
