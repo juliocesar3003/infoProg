@@ -360,7 +360,7 @@ body{
 }
 @media(max-width: 460px){
     .ContainerPai{
-        grid-template-rows: 50% 20% 140%;
+        grid-template-rows: 50% 20% 160%;
     }
     #segundo> p{
         font-size: 6px;
