@@ -397,6 +397,9 @@ body{
      }
 }
 @media(max-width: 390px){
+    .ContainerPai{
+        grid-template-rows: 50% 20% 160%;
+    }
     #primeiro>h6{
         font-size: 13px;
     }

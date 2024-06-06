@@ -50,7 +50,7 @@ body{
     border-radius: 10px;
     padding-left: 5px;
      
-}
+}   
 .ContainerPai #primeiro div> p{
   opacity: 0;
    animation:opacidade 2s linear forwards;
@@ -377,6 +377,9 @@ body{
      }
 }
 @media(max-width: 390px){
+    .ContainerPai{
+        grid-template-rows: 50% 20% 160%;
+    }
     #primeiro>h6{
         font-size: 13px;
     }
